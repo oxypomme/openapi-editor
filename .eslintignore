@@ -1,0 +1,4 @@
+# ignore file used by cli
+dist
+dist-electron
+.nuxt

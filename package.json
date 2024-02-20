@@ -1,0 +1,56 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "build": "nuxt build --prerender && electron-builder",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --fix .",
+    "prepare": "husky",
+    "preview": "nuxt preview"
+  },
+  "lint-staged": {
+    "package.json": [
+      "sort-package-json"
+    ],
+    ".{ts,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "nuxt": "^3.10.2",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.19",
+    "vue-router": "^4.2.5",
+    "vuetify": "^3.5.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
+    "@pinia/nuxt": "^0.5.1",
+    "@rushstack/eslint-patch": "^1.7.2",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vue/eslint-config-airbnb-with-typescript": "^8.0.0",
+    "electron": "^28.2.3",
+    "electron-builder": "^24.12.0",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.21.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "nuxt-electron": "^0.7.0",
+    "sort-package-json": "^2.7.0",
+    "vite-plugin-electron": "^0.28.2",
+    "vite-plugin-electron-renderer": "^0.14.5",
+    "vuetify-nuxt-module": "^0.11.0"
+  }
+}
